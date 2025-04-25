@@ -11,8 +11,14 @@ async function enviarMensagem() {
     const dados = await resposta.json();
 
     const chatBox = document.getElementById("chat-box");
-    chatBox.innerHTML += `<p><strong>Você:</strong> ${mensagem}</p>`;
-    chatBox.innerHTML += `<p><strong>Bot:</strong> ${dados.response}</p>`;
+    chatBox.innerHTML += `<div class="mensagem usuario"> ${mensagem} </div><br>`;
+    chatBox.innerHTML += `<div class="mensagem bot"> ${dados.response} </div><br>`;
 
     input.value = '';
+}
+
+function verificaEnter(event) {
+    if (event.key === "Enter") {
+        enviarMensagem();
+    }
 }

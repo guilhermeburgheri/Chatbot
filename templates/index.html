@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Chatbot Web</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Furia chat</title>
+        <style>
+            body {
+                background-image: url('/static/ImgBg.jpg'); /* Imagem de fundo */
+                background-size: cover; /* Tamanho */
+                background-position: center; /* Centralizada */
+                background-attachment: fixed; /* Imagem fixa */
+                color: white;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                height: 100vh;
+                padding: 20px;
+                transform: translateY(-35px);
+            }
+
+            html, body {
+                height: 100%;        /* Garantir que a altura seja 100% */
+                margin: 0;           /* Remover margens */
+                overflow: hidden;    /* Desabilitar a rolagem */
+            }
+
+            body {
+                background-color: #121212;
+                color: white;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; /* Centralizando na tela */
+                height: 100vh;          /* Altura ocupar toda a tela */
+            }
+    
+            h2 {
+                margin-bottom: 20px;
+                font-size: 2rem;
+                text-align: center;
+            }
+    
+            #chat-box {
+                border: 1px solid #444;
+                padding: 10px;
+                width: 100%;
+                max-width: 450px; /* Largura do chat */
+                height: 400px;
+                overflow-y: auto;
+                background-color: rgba(30, 30, 30, 0.8); /* Fundo com transparente */
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+    
+            #chat-box p {
+                margin: 5px 0;
+            }
+            
+            .mensagem {
+                max-width: 80%;
+                padding: 8px 12px;
+                margin: 5px;
+                border-radius: 15px;
+                display: inline-block;
+                clear: both;
+            }
+
+            .usuario {
+                background-color: #2a2a2a;
+                color: white;
+                float: right;
+                text-align: right;
+            }
+
+            .bot {
+                background-color: #e0e0e0;
+                color: #121212;
+                float: left;
+                text-align: left;
+            }
+    
+            input[type="text"] {
+                width: 100%;
+                max-width: 400px;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                margin-top: 10px;
+                background-color: #2a2a2a;
+                color: white;
+            }
+    
+            button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: white;
+                color: #121212;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+    
+            button:hover {
+                background-color: #ccc;
+            }
+        </style>
+    </head>
 <body>
-    <h2>Chat com o Bot</h2>
+    <h2>Falaaa furioso!</h2>
     <div id="chat-box"></div>
-    <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
+    <input type="text" id="user-input" placeholder="Digite sua mensagem..." onkeydown="verificaEnter(event)" />
     <button onclick="enviarMensagem()">Enviar</button>
 
     <script src="/static/script.js"></script>
