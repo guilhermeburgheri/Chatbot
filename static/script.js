@@ -15,6 +15,8 @@ async function enviarMensagem() {
     chatBox.innerHTML += `<div class="mensagem bot"> ${dados.response} </div><br>`;
 
     input.value = '';
+    
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 function verificaEnter(event) {
