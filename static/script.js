@@ -1,6 +1,16 @@
 async function enviarMensagem() {
     const input = document.getElementById("user-input");
-    const mensagem = input.value;
+    const erroDiv = document.getElementById("erro-mensagem");
+    const mensagem = input.value.trim();
+
+    if (!mensagem) {
+        erroDiv.textContent = "Assim não, furioso! Digite uma mensagem antes de enviar.";
+        input.style.border = "2px solid red";
+        return;
+    }
+
+    erroDiv.textContent = "";
+    input.style.border = "none";
 
     const resposta = await fetch('/chat', {
         method: 'POST',
@@ -24,3 +34,8 @@ function verificaEnter(event) {
         enviarMensagem();
     }
 }
+
+document.getElementById("user-input").addEventListener("input", () => {
+    document.getElementById("erro-mensagem").textContent = "";
+    document.getElementById("user-input").style.border = "none";
+});

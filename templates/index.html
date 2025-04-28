@@ -59,6 +59,13 @@
             #chat-box p {
                 margin: 5px 0;
             }
+
+            #erro-mensagem {
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+                margin-top: 5px;
+                height: 18px;
+            }
             
             .mensagem {
                 max-width: 80%;
@@ -114,6 +121,7 @@
     <h2>Falaaa furioso!</h2>
     <div id="chat-box"></div>
     <input type="text" id="user-input" placeholder="Digite sua mensagem..." onkeydown="verificaEnter(event)" />
+    <div id="erro-mensagem"></div>
     <button onclick="enviarMensagem()">Enviar</button>
 
     <script src="/static/script.js"></script>

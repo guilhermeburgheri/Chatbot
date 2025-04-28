@@ -18,12 +18,11 @@ def index():
 def chat():
     user_input = normalizar(request.json.get('message'))
 
-    # Respostas pré-definidas
     respostas = {
         ("oi", "beleza", "olá", "e aí", "opa", "fala", "fala ai", "falaa", "bom dia", "boa tarde", "boa noite"): 
             "Falaa, fã da FURIA! Preparado pra mais um dia?",
 
-        ("quem é a furia", "o que é furia", "o que significa a furia", "me fala sobre a furia", "quem vocês são", "quem são vocês"): 
+        ("quem é a furia", "o que é furia", "o que significa a furia","me conta sobre a furia",  "me fala sobre a furia", "quem vocês são", "quem são vocês"): 
             "A FURIA é um dos maiores times de E-Sports do Brasil, com grandes times e uma torcida apaixonada!",
 
         ("quem joga", "quem são os jogadores", "qual o time", "quem está no time da furia"):
@@ -33,7 +32,7 @@ def chat():
             "O time consta com dois super treinadores. São eles: Sidde e Hepa!",
 
         ("próximo campeonato", "próximo jogo", "próximos campeonatos", "quando jogam", "quando vão jogar", "tem jogo hoje"):
-            "Ainda não sei a data exata do próximo confronto, mas tem campeonato novo chegando, da uma olhada no PGL Astana 2025",
+            "Ainda não tenho a data exata do próximo confronto, mas tem campeonato novo chegando, da uma olhada no PGL Astana 2025",
 
         ("ganharam", "venceram", "furia ganhou", "último jogo"):
             "No último jogo a FURIA mandou bem demais! Mas vale sempre conferir o resultado e os highlights no canal oficial.",
@@ -46,7 +45,7 @@ def chat():
 
     for chaves, mensagem in respostas.items():
         normalizadas_chaves = [normalizar(chave) for chave in chaves]
-        if any(palavra in user_input for palavra in normalizadas_chaves):
+        if user_input in normalizadas_chaves:
             resposta = mensagem
             break
 
