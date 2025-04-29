@@ -22,16 +22,19 @@ def chat():
         ("oi", "beleza", "olá", "e aí", "opa", "fala", "fala ai", "falaa", "bom dia", "boa tarde", "boa noite"): 
             "Falaa, fã da FURIA! Preparado pra mais um dia?",
 
-        ("quem é a furia", "o que é furia", "o que significa a furia","me conta sobre a furia",  "me fala sobre a furia", "quem vocês são", "quem são vocês"): 
+        ("sempre pronto", "bora la", "vamos nessa", "nasci pronto", "com certeza", "sim"):
+            "Que bom saber, como posso ajudar hoje?",
+
+        ("quem é a furia", "o que é furia", "o que significa a furia", "me conta sobre a furia",  "me fala sobre a furia", "quem vocês são", "quem são vocês"): 
             "A FURIA é um dos maiores times de E-Sports do Brasil, com grandes times e uma torcida apaixonada!",
 
-        ("quem joga", "quem são os jogadores", "qual o time", "quem está no time da furia"):
+        ("quem joga", "quem que joga", "quem são os jogadores", "qual o time", "quem está no time da furia"):
             "O elenco atual da FURIA no time de CS têm grandes jogadores como: KSCERATO, yuurih, molodoy, YEKINDAR e FalleN (dependendo do roster atual).",
 
         ("quem treina essas feras", "quem treina esses caras", "quem é o treinador desse time", "quem é o tecnico", "quem é o coach"):
             "O time consta com dois super treinadores. São eles: Sidde e Hepa!",
 
-        ("próximo campeonato", "próximo jogo", "próximos campeonatos", "quando jogam", "quando vão jogar", "tem jogo hoje"):
+        ("qual a data do próximo campeonato", "próximo campeonato", "qual a data do próximo jogo", "quando é o próximo jogo", "próximo jogo", "quais são os próximos campeonatos", "quando jogam", "quando vão jogar", "tem jogo hoje"):
             "Ainda não tenho a data exata do próximo confronto, mas tem campeonato novo chegando, da uma olhada no PGL Astana 2025",
 
         ("ganharam", "venceram", "furia ganhou", "último jogo"):
