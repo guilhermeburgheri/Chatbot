@@ -39,6 +39,9 @@ def chat():
 
         ("ganharam", "venceram", "furia ganhou", "último jogo"):
             "No último jogo a FURIA mandou bem demais! Mas vale sempre conferir o resultado e os highlights no canal oficial.",
+        
+        ("consigo entrar em contato com vocês", "como faço para entrar em contato com vocês", "como faço para falar com vocês", "como posso falar com vocês", "como entrar em contato com vocês"):
+            "Você pode falar com nossa equipe de suporte através do seguinte número: (11)99942-1659",
 
         ("adeus", "tchau", "valeu", "até mais"):
             "Valeu por bater esse papo! Furia neles!"
