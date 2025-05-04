@@ -37,7 +37,7 @@ def chat():
         ("qual a data do próximo campeonato", "próximo campeonato", "qual a data do próximo jogo", "quando é o próximo jogo", "próximo jogo", "quais são os próximos campeonatos", "quando jogam", "quando vão jogar", "tem jogo hoje"):
             "Ainda não tenho a data exata do próximo confronto, mas tem campeonato novo chegando, da uma olhada no PGL Astana 2025",
 
-        ("ganharam", "venceram", "furia ganhou", "último jogo"):
+        ("ganharam o ultimo jogo", "venceram o ultimo jogo", "furia ganhou o ultimo jogo", "como foi o último jogo"):
             "No último jogo a FURIA mandou bem demais! Mas vale sempre conferir o resultado e os highlights no canal oficial.",
         
         ("consigo entrar em contato com vocês", "como faço para entrar em contato com vocês", "como faço para falar com vocês", "como posso falar com vocês", "como entrar em contato com vocês"):
